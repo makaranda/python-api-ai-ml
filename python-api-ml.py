@@ -24,7 +24,7 @@ public_url = ngrok.connect(port_no).public_url
 
 INTENTS_FILE_PATH = 'https://yourdomain.com/chatbot/intents.json'
 
-GEMINI_API_KEY = "AIzaSyDK-VrYB-xeK62LM4NaxwaG7jCglMADfyc"
+GEMINI_API_KEY = "GEMINI_API_KEY"
 
 genai.configure(
 	api_key=GEMINI_API_KEY
