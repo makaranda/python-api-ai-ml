@@ -19,7 +19,7 @@ port_no = 5000
 
 app = Flask(__name__)
 
-ngrok.set_auth_token('1o9wGxwcciwpfKaWZAhFRNQ7Kof_4xgNQg3R2oB1g6RSEbJ1M')
+ngrok.set_auth_token('NGROK_AUTH_TOKEN')
 public_url = ngrok.connect(port_no).public_url
 
 INTENTS_FILE_PATH = 'https://test.onlinedubaivisas.com/chatbot/intents.json'
