@@ -22,7 +22,7 @@ app = Flask(__name__)
 ngrok.set_auth_token('NGROK_AUTH_TOKEN')
 public_url = ngrok.connect(port_no).public_url
 
-INTENTS_FILE_PATH = 'https://test.onlinedubaivisas.com/chatbot/intents.json'
+INTENTS_FILE_PATH = 'https://yourdomain.com/chatbot/intents.json'
 
 GEMINI_API_KEY = "AIzaSyDK-VrYB-xeK62LM4NaxwaG7jCglMADfyc"
 
@@ -40,7 +40,7 @@ def home():
 @app.route('/api/update-dataset')
 def datasets():
 # URL of the server file
-    url = "https://test.onlinedubaivisas.com/chatbot/data.pth"
+    url = "https://yourdomain.com/chatbot/data.pth"
 
     try:
         # Fetch the file from the server
@@ -116,12 +116,12 @@ def get_message(sentence):
                 out = self.l3(out)
                 return out
 
-        server_json_url = 'https://test.onlinedubaivisas.com/chatbot/intents.json'
+        server_json_url = 'https://yourdomain.com/chatbot/intents.json'
         response = requests.get(server_json_url)
         response.raise_for_status()
         intents = response.json()
 
-        url = "https://test.onlinedubaivisas.com/chatbot/data.pth"
+        url = "https://yourdomain.com/chatbot/data.pth"
         response = requests.get(url)
         response.raise_for_status()
         file_bytes = BytesIO(response.content)
