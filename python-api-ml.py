@@ -166,6 +166,7 @@ def get_message(sentence):
                     'bot_message': bot_response,
                     'chat_type' : 'json'
                 }
+
                 return jsonify(response_data)
 
                 #else:
