@@ -15,6 +15,7 @@ import os
 import google.generativeai as genai
 stemmer = PorterStemmer()
 
+
 port_no = 5000
 
 app = Flask(__name__)
